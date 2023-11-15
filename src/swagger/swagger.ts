@@ -1001,10 +1001,6 @@ const options = {
                     user_id: {
                       type: 'string',
                     },
-                    user: {
-                      description: "User's fullname",
-                      type: 'string',
-                    },
                     company: {
                       type: 'string',
                     },
