@@ -1012,6 +1012,11 @@ const options = {
                       description: 'access link',
                       type: 'string',
                     },
+                    type: {
+                      type: 'string',
+                      example: 'CONCIERGE',
+                      description: 'CONCIERGE or USER',
+                    },
                   },
                 },
               },
