@@ -1036,6 +1036,81 @@ const options = {
           },
         },
       },
+      '/api/notification/to-user': {
+        post: {
+          summary: 'Create notification to user',
+          description: 'Create notification to user',
+          tags: ['API'],
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    user_id: {
+                      type: 'string',
+                    },
+                    title: {
+                      type: 'string',
+                    },
+                    url: {
+                      type: 'string',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          responses: {
+            '201': {
+              description: 'Create notification to user success',
+              content: {
+                'application/json': {
+                  schema: {
+                    $ref: '#/components/schemas/success_message',
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/api/notification/to-all': {
+        post: {
+          summary: 'Create notification to all',
+          description: 'Create notification to all',
+          tags: ['API'],
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    title: {
+                      type: 'string',
+                    },
+                    url: {
+                      type: 'string',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          responses: {
+            '201': {
+              description: 'Create notification to all success',
+              content: {
+                'application/json': {
+                  schema: {
+                    $ref: '#/components/schemas/success_message',
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       '/favorite-job/{id}': {
         get: {
           summary: 'Get favorite jobs',
