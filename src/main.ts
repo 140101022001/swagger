@@ -6,8 +6,9 @@ import { swaggerSpec } from './swagger/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  await app.listen(3000, () => {
-    console.log(`server is running in http://localhost:3000`);
+  const PORT = parseInt(process.env.PORT);
+  await app.listen(PORT, () => {
+    console.log(`server is running in http://localhost:${PORT}`);
   });
 }
 bootstrap();
